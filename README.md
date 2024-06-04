@@ -1,8 +1,6 @@
-# Nuxt 3 Minimal Starter
+# CatFacts Project 🚀
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
+## Setup 🛠️
 
 Make sure to install the dependencies:
 
@@ -20,7 +18,7 @@ yarn install
 bun install
 ```
 
-## Development Server
+## Development Server 🖥️
 
 Start the development server on `http://localhost:3000`:
 
@@ -38,7 +36,7 @@ yarn dev
 bun run dev
 ```
 
-## Production
+## Production 🏭
 
 Build the application for production:
 
@@ -72,4 +70,21 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Unit Testing 🧪
+
+Run unit tests to ensure your application is working as expected:
+
+```bash
+# npm
+npm run test
+
+# pnpm
+pnpm run test
+
+# yarn
+yarn test
+
+# bun
+bun run test
+```
+
