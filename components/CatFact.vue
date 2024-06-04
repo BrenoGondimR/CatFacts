@@ -24,24 +24,30 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { ref, onMounted } from 'vue'
 import { useCatFactsStore } from '@/store/catFacts'
 
-const store = useCatFactsStore()
-const fact = ref(store.currentFact)
-
-const fetchNewFact = async () => {
-  fact.value = ''
-  setTimeout(async () => {
-    await store.fetchCatFact()
-    fact.value = store.currentFact
-  }, 300)
+export default {
+  data() {
+    return {
+      fact: ''
+    }
+  },
+  methods: {
+    async fetchNewFact() {
+      this.fact = ''
+      setTimeout(async () => {
+        await this.store.fetchCatFact()
+        this.fact = this.store.currentFact
+      }, 300)
+    }
+  },
+  mounted() {
+    this.store = useCatFactsStore()
+    this.fetchNewFact()
+  }
 }
-
-onMounted(() => {
-  fetchNewFact()
-})
 </script>
 
 <style scoped>
